@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1210</width>
+    <height>624</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> background-color: #E8E8E8;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>651</width>
+      <height>529</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="5" column="0">
+      <layout class="QGridLayout" name="gridLayout_file_info_1">
+       <item row="3" column="0">
+        <widget class="QLabel" name="vertices">
+         <property name="styleSheet">
+          <string notr="true"> font-size: 15px;
+ color: black;</string>
+         </property>
+         <property name="text">
+          <string> Vertices: </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="edges">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>43</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> font-size: 15px;
+ color: black;</string>
+         </property>
+         <property name="text">
+          <string> Edges: </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="file">
+         <property name="minimumSize">
+          <size>
+           <width>319</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>319</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> font-size: 15px;
+ color: black;</string>
+         </property>
+         <property name="text">
+          <string> File: </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="3" column="2">
+        <widget class="QLineEdit" name="lineEdit_rotate_z">
+         <property name="styleSheet">
+          <string notr="true"> background-color: #8B8B8B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="4" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_z">
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_backward_z">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Backward</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_forward_z">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Forward</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_line_width">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QPushButton" name="pushButton_line_color">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Line color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_x">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_left_x">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Left</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_right_x">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Right</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="2" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_y">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #4F4F4F;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_y">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_up_y">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Up</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_down_y">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Down</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="5" column="2" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_scale">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #6D6D6D;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_z">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #636363;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_point_size">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #454545;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_x">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #595959;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_points">
+           <item row="0" column="2">
+            <widget class="QRadioButton" name="radioButton_without_points">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Without</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">buttonGroup_points</string>
+             </attribute>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QRadioButton" name="radioButton_square_points">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Square</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">buttonGroup_points</string>
+             </attribute>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="radioButton_round_points">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Round</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">buttonGroup_points</string>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="4">
+          <widget class="QPushButton" name="pushButton_point_color">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Point color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButton_scale">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Scale</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_lines">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="radioButton_solid_line">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Solid line</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">buttonGroup_lines</string>
+             </attribute>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QRadioButton" name="radioButton_dotted_line">
+             <property name="styleSheet">
+              <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Dotted line</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">buttonGroup_lines</string>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <layout class="QGridLayout" name="gridLayout_rotate_y">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton_rotate_y_left">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>↶ Rotate Y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_rotate_y_right">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Rotate Y ↷</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="lineEdit_rotate_x">
+         <property name="styleSheet">
+          <string notr="true"> background-color: #777777;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="lineEdit_rotate_y">
+         <property name="styleSheet">
+          <string notr="true"> background-color: #828282;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <layout class="QGridLayout" name="gridLayout_rotate_x">
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_rotate_x_right">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Rotate X ↷</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton_rotate_x_left">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>↶ Rotate X</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <layout class="QGridLayout" name="gridLayout_rotate_z">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton_rotate_z_left">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>↶ Rotate Z</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_rotate_z_right">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Rotate Z ↷</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="0" colspan="3">
+        <layout class="QGridLayout" name="gridLayout_projection">
+         <item row="0" column="1">
+          <widget class="QRadioButton" name="radioButton_frustum">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Central projection</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">buttonGroup_projection</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="radioButton_ortho">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Parallel projection</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">buttonGroup_projection</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="pushButton_background_color">
+           <property name="styleSheet">
+            <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>Background color</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_Load_obj_file">
+       <property name="styleSheet">
+        <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>Load .obj file</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_screenshot">
+       <property name="styleSheet">
+        <string notr="true"> background-color: #3B3B3B;
+ border-style: solid;
+ border-radius:5px;
+ font-size: 15px;
+ color: white;
+ height: 25px;
+ border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>Take screenshot</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <layout class="QGridLayout" name="gridLayout_file_info_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="filename_label">
+         <property name="styleSheet">
+          <string notr="true"> font-size: 15px;
+ color: black;
+ height: 25px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_edges">
+         <property name="styleSheet">
+          <string notr="true"> font-size: 15px;
+ color: black;
+ height: 25px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_vertexes">
+         <property name="styleSheet">
+          <string notr="true"> font-size: 15px;
+ color: black;
+ height: 25px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="OpenGL_Widget" name="widget_opengl" native="true">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>10</y>
+      <width>531</width>
+      <height>531</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1210</width>
+     <height>19</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>OpenGL_Widget</class>
+   <extends>QWidget</extends>
+   <header>opengl_widget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_projection"/>
+  <buttongroup name="buttonGroup_lines"/>
+  <buttongroup name="buttonGroup_points"/>
+ </buttongroups>
+</ui>
